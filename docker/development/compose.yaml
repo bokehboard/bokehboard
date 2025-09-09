@@ -1,0 +1,45 @@
+name: bokehboard-development
+
+services:
+  database:
+    image: postgres:17
+    container_name: database
+    volumes:
+      - database:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U ${POSTGRES_USER}']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      - POSTGRES_USER=bokehboard
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=bokehboard
+    ports:
+      - 54320:5432
+
+  inbucket:
+    image: inbucket/inbucket
+    container_name: mailserver
+    ports:
+      - 9000:9000
+      - 2500:2500
+      - 1100:1100
+
+  minio:
+    image: minio/minio
+    container_name: minio
+    ports:
+      - 9002:9002
+      - 9001:9001
+    volumes:
+      - minio:/data
+    environment:
+      MINIO_ROOT_USER: bokehboard
+      MINIO_ROOT_PASSWORD: password
+    entrypoint: sh
+    command: -c 'mkdir -p /data/bokehboard && minio server /data --console-address ":9001" --address ":9002"'
+
+volumes:
+  minio:
+  database:
