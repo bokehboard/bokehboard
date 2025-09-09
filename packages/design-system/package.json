@@ -45,7 +45,7 @@
     "lucide-react": "catalog:design",
     "next-themes": "^0.4.6",
     "react": "catalog:",
-    "react-day-picker": "^8.10.1",
+    "react-day-picker": "^9.9.0",
     "react-hook-form": "catalog:design",
     "react-moveable": "^0.56.0",
     "react-resizable-panels": "^3.0.2",
