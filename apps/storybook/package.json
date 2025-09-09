@@ -1,0 +1,44 @@
+{
+  "name": "@bokehboard/storybook",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "build": "storybook build",
+    "chromatic": "chromatic --exit-zero-on-changes",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@bokehboard/design-system": "workspace:*",
+    "@storybook/addon-actions": "^9.0.8",
+    "cmdk": "catalog:design",
+    "date-fns": "catalog:design",
+    "input-otp": "catalog:design",
+    "lucide-react": "catalog:design",
+    "next": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-hook-form": "catalog:design",
+    "recharts": "catalog:design",
+    "sonner": "catalog:design",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@bokehboard/typescript-config": "workspace:*",
+    "@chromatic-com/storybook": "^4.1.1",
+    "@storybook/addon-a11y": "^9.1.5",
+    "@storybook/addon-onboarding": "^9.1.5",
+    "@storybook/addon-themes": "^9.1.5",
+    "@storybook/nextjs": "^9.1.5",
+    "@storybook/react": "^9.1.5",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "chromatic": "^13.1.4",
+    "postcss": "catalog:",
+    "storybook": "^9.1.5",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:"
+  }
+}

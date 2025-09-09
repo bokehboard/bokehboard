@@ -1,0 +1,21 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "styles/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true,
+    "prefix": ""
+  },
+  "aliases": {
+    "components": "@bokehboard/design-system/components",
+    "utils": "@bokehboard/design-system/lib/utils",
+    "hooks": "@bokehboard/design-system/hooks",
+    "lib": "@bokehboard/design-system/lib",
+    "ui": "@bokehboard/design-system/components/ui"
+  },
+  "iconLibrary": "lucide"
+}
